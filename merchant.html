@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onboard your business — HJ Loyalty & Rewards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'picton-blue': '#52c1e2',
+        'shark': '#232425',
+        'swirl': '#d3cec8',
+        'sandstone': '#7a736a',
+        'san-marino': '#4b62a6',
+        'astronaut': '#253871',
+        'blue-bayoux': '#446774',
+        'crater-brown': '#4b2c28',
+        'outer-space': '#324845',
+        'fruit-salad': '#509574'
+      }
+    }
+  }
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>html,body{font-family:Inter,system-ui,sans-serif}.container-tight{max-width:1100px}</style>
+</head>
+<body class="bg-swirl text-shark">
+<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+  <div class="container mx-auto px-4 container-tight h-16 flex items-center justify-between">
+    <a href="/index.html" class="flex items-center gap-2">
+      <img src="./asset/logo1.png" class="w-auto h-14"/><span class="font-semibold">Loyalty & Rewards</span>
+    </a>
+    <div class="flex items-center gap-3">
+      <!-- <a href="#merchant-benefits" class="hidden md:inline-block px-4 py-2 border rounded-full">Benefits</a> -->
+      <a href="/customer.html" class="px-4 py-2 bg-picton-blue border rounded-full">Member Sign UP </a>
+    </div>
+  </div>
+</header>
+<main class="container mx-auto px-4 container-tight py-12">
+  <div class="grid md:grid-cols-2 gap-8">
+    
+    <!-- Left column: Benefits -->
+    <div class="bg-white border rounded-2xl p-8 shadow-sm">
+      <h2 class="text-2xl font-semibold">Benefits for Merchants</h2>
+      <p class="mt-2 text-gray-700">Grow revenue, attract new customers, and get real-time insight—without heavy lift.</p>
+
+      <ul class="mt-6 space-y-4">
+        <li class="p-4 bg-swirl rounded-xl border"><strong>Fast onboarding:</strong> Secure registration & verification, multi-location profiles, bank details & store setup.</li>
+        <li class="p-4 bg-swirl rounded-xl border"><strong>Clear reporting:</strong> View redemptions, earnings, and transaction history with downloadable reports.</li>
+        <li class="p-4 bg-swirl rounded-xl border"><strong>Global redemption:</strong> Accept points from global members—auto-converted using real-time currency exchange rates.</li>
+        <li class="p-4 bg-swirl rounded-xl border"><strong>QR checkout:</strong> Generate dynamic QR by Point value; customers scan & authenticate to redeem.</li>
+        <li class="p-4 bg-swirl rounded-xl border"><strong>Easy integrations:</strong> Plug into POS & e-commerce with secure APIs; enable checkout redemption.</li>
+        <li class="p-4 bg-swirl rounded-xl border"><strong>Fast payouts:</strong> Convert earned points to cash and transfer to your bank securely.</li>
+        <li class="p-4 bg-swirl rounded-xl border"><strong>Customer insights:</strong> Dashboard with demographics, spend patterns, redemption trends & campaign performance.</li>
+        <li class="p-4 bg-swirl rounded-xl border"><strong>Enterprise-grade security:</strong> TLS, encryption, audits, and fraud detection to keep your business safe.</li>
+        <li class="p-4 bg-swirl rounded-xl border"><strong>Priority support:</strong> Multi-channel support and built-in dispute management with tracking.</li>
+      </ul>
+
+      <div class="mt-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800">
+        Bonus: Run coupons & bonus-point campaigns to drive footfall and repeat purchases.
+      </div>
+    </div>
+
+    <!-- Right column: Form -->
+    <div class="bg-white border rounded-2xl p-8 shadow-sm">
+      <h1 class="text-3xl font-bold">Onboard your business</h1>
+      <p class="mt-2 text-gray-700">Join our loyalty network and boost repeat sales. Approval in <strong>24 hours</strong>.</p>
+
+      <ol class="mt-6 grid grid-cols-3 gap-4 text-sm text-gray-700">
+        <li class="bg-swirl rounded-xl p-4 border"><span class="font-semibold">1.</span> Provide business details</li>
+        <li class="bg-swirl rounded-xl p-4 border"><span class="font-semibold">2.</span> Set reward rules</li>
+        <li class="bg-swirl rounded-xl p-4 border"><span class="font-semibold">3.</span> Integrate & go live</li>
+      </ol>
+
+      <form id="merchant-form" class="mt-8 grid grid-cols-1 gap-4">
+        <div>
+          <label class="text-sm text-gray-600">Company name</label>
+          <input required name="company" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="Acme Retail Pvt Ltd" />
+        </div>
+        <div>
+          <label class="text-sm text-gray-600">Website</label>
+          <input type="url" name="website" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="https://example.com" />
+        </div>
+        <div>
+          <label class="text-sm text-gray-600">Contact email</label>
+          <input required type="email" name="email" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="ops@example.com" />
+        </div>
+        <div>
+          <label class="text-sm text-gray-600">Contact phone</label>
+          <input required name="phone" pattern="\\d{10,}" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="10+ digits" />
+        </div>
+        <div>
+          <label class="text-sm text-gray-600">Industry</label>
+          <select name="industry" class="mt-1 w-full rounded-lg border px-3 py-2">
+            <option>Food & Beverage</option><option>Fashion & Apparel</option>
+            <option>Electronics</option><option>Travel</option><option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-sm text-gray-600">Reward rate</label>
+          <select name="rewardRate" class="mt-1 w-full rounded-lg border px-3 py-2">
+            <option value="1">1% back</option><option value="2" selected>2% back</option><option value="5">5% back</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-sm text-gray-600">Max monthly cap (points)</label>
+          <input type="number" min="0" step="10" name="cap" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="5000" />
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <input type="checkbox" id="agree-m" required />
+          <label for="agree-m">I agree to the <a class="text-picton-blue underline" href="#">Merchant Terms</a>.</label>
+        </div>
+        <div class="mt-2">
+          <button class="w-full px-5 py-3 rounded-full bg-picton-blue text-white hover:bg-astronaut">Request onboarding</button>
+        </div>
+      </form>
+
+    
+    </div>
+
+  </div>
+</main>
+
+
+<footer class="mt-16 border-t bg-astronaut text-white">
+  <div class="container mx-auto px-4 container-tight py-8 text-sm">
+    © <span id="yr"></span> HJ Rewards Limited. All rights reserved.
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script src="/js/app.js"></script>
+</body>
+</html>

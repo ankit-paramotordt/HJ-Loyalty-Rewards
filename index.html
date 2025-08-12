@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HJ Loyalty & Rewards — Global Loyalty & Rewards Platform</title>
+  <meta name="description" content="Earn points on every purchase. Enjoy member-only rates, tier upgrades, and global redemptions across our partners." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { 
+      theme: { 
+        extend: { 
+          colors: { 
+            'picton-blue': '#52c1e2',
+            'shark': '#232425',
+            'swirl': '#d3cec8',
+            'sandstone': '#7a736a',
+            'san-marino': '#4b62a6',
+            'astronaut': '#253871',
+            'blue-bayoux': '#446774',
+            'crater-brown': '#4b2c28',
+            'outer-space': '#324845',
+            'fruit-salad': '#509574'
+          } 
+        } 
+      } 
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --radius: 16px; }
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: #232425; }
+    .serif { font-family: "Playfair Display", Georgia, serif; }
+    .container-tight { max-width: 1200px; }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(35,36,37,.12); }
+    .card { border-radius: var(--radius); border: 1px solid #eee; background: #fff; }
+    .pill { border-radius: 9999px; }
+    .overlay-gradient { background: linear-gradient(90deg, rgba(37,56,113,.80), rgba(37,56,113,.30) 45%, rgba(0,0,0,0) 70%); }
+    details > summary::-webkit-details-marker { display:none; }
+  </style>
+</head>
+<body class="bg-picton-blue/5 text-shark">
+  <!-- NAV -->
+  <header class="sticky top-0 z-40 bg-picton-blue/10 backdrop-blur border-b border-picton-blue/20">
+  <div class="container mx-auto px-4 container-tight h-16 flex items-center justify-between">
+    <a href="/index.html" class="flex items-center">
+      <img src="./asset/logo1.png" alt="logo" class="h-14 w-auto" />
+      <span class="font-semibold tracking-wide">Loyalty & Rewards</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="#benefits" class="hover:text-picton-blue">Benefits</a>
+      <!-- <a href="#tiers" class="hover:text-picton-blue">Tiers</a> -->
+      <a href="#partners" class="hover:text-picton-blue">Partners</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="/customer.html" class="px-4 py-2 pill text-white bg-picton-blue hover:bg-astronaut">Member Sign Up</a>
+      <a href="/merchant.html" class="px-4 py-2 pill text-white bg-picton-blue hover:bg-astronaut">Merchant Sign Up</a>
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <!-- HERO -->
+    <section class="relative h-[400px] md:h-[560px] lg:h-[700px]">
+  <div class="absolute inset-0">
+    <img src="./asset/Untitled-2.png"
+         class="w-full h-[400px] md:h-[560px] lg:h-[700px] object-cover"
+         alt="Loyalty Program" />
+    <div class="absolute inset-0 overlay-gradient"></div>
+  </div>
+  <div class="container mx-auto px-4 container-tight relative h-full flex items-center">
+    <div class="max-w-xl text-white">
+      <h1 class="serif text-5xl leading-tight">Become a member. Earn more. Redeem globally.</h1>
+      <p class="mt-4 text-lg text-white/90">
+        Get rewarded every time you shop with our global partners. The more you earn, 
+        the more perks you unlock—like special rates, upgrades, and experiences.
+      </p>
+      <div class="mt-6 flex gap-3">
+        <a href="/customer.html" class="px-6 py-3 pill bg-picton-blue text-white hover:bg-astronaut">Join for free</a>
+        <a href="#benefits" class="px-6 py-3 pill bg-picton-blue text-shark hover:text-white">How it works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- FEATURES -->
+    <section id="benefits" id="how" class="container mx-auto px-4 container-tight py-14">
+  <div class="text-center">
+    <div class="text-sm uppercase tracking-widest text-picton-blue font-semibold">Rewarding customers globally</div>
+    <h2 class="serif text-3xl mt-2">Join once. Earn everywhere.</h2>
+    <p class="mt-2 text-sandstone">Register today and start earning rewards wherever you shop, dine, or travel. Redeem them in local currency at home or abroad.</p>
+    <a href="/customer.html" class="inline-block mt-4 px-5 py-2 pill bg-picton-blue text-white hover:bg-astronaut">Create an account</a>
+  </div>
+  
+  <div class="grid md:grid-cols-3 gap-6 mt-10">
+    <!-- Bonus on registration -->
+    <div class="card p-6 shadow-soft border-t-4 border-t-picton-blue">
+      <div class="text-2xl font-semibold">Get a Welcome Bonus</div>
+      <p class="mt-2 text-gray-600">Sign up now and receive bonus HJ Points to kickstart your journey.</p>
+      <!-- <a class="mt-3 inline-block text-picton-blue" href="#join">Join &amp; claim bonus →</a> -->
+    </div>
+    
+    <!-- Redeem in local or home currency -->
+    <div class="card p-6 shadow-soft">
+      <div class="text-2xl font-semibold">Redeem in Local or Home Currency</div>
+      <p class="mt-2 text-gray-600">Whether you’re at home or traveling, convert your points to spend in your preferred currency instantly.</p>
+      <!-- <span class="mt-3 inline-block text-picton-blue">See how redemption works →</span> -->
+    </div>
+    
+    <!-- Redeem online or offline -->
+    <div class="card p-6 shadow-soft">
+      <div class="text-2xl font-semibold">Redeem Online &amp; Offline</div>
+      <p class="mt-2 text-gray-600">Use your rewards at partner stores, restaurants, and experiences — both online and in person.</p>
+      <!-- <span class="mt-3 inline-block text-picton-blue">Explore redemption options →</span> -->
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- EDITORIAL CARDS -->
+    <section  class="container mx-auto px-4 container-tight py-6">
+      <div class="grid md:grid-cols-2 gap-6">
+        <article class="card overflow-hidden shadow-soft border-b-4 border-b-picton-blue">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1800&auto=format&fit=crop" class="w-full h-64 object-cover" alt="Shopping" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Purchases that reward you</h3>
+            <p class="mt-2 text-gray-600">Earn points on every purchase, plus bonus points during festive periods.</p>
+            <a href="#" class="mt-3 inline-block text-picton-blue">Explore benefits</a>
+          </div>
+        </article>
+        <article class="card overflow-hidden shadow-soft border-b-4 border-b-picton-blue">
+          <img src="https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?q=80&w=1800&auto=format&fit=crop" class="w-full h-64 object-cover" alt="Global Partners" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Global Merchant Network</h3>
+            <p class="mt-2 text-gray-600">Earn at retail stores, restaurants, and services—then redeem for purchases or vouchers.</p>
+            <a href="#" class="mt-3 inline-block text-picton-blue">See partners</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    
+
+
+    <!-- PARTNERS -->
+    <section id="partners" class="bg-swirl border-y">
+      <div class="container mx-auto px-4 container-tight py-14">
+        <h2 class="serif text-3xl mb-6 text-center text-shark">Global Merchant Network</h2>
+        <div id="dest-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+  </main>
+
+<!-- POINTS: BUY, USE & REDEEM -->
+<section id="points" class="container mx-auto px-4 container-tight py-14">
+  <div class="text-center">
+    <div class="text-sm uppercase tracking-widest text-picton-blue font-semibold">Points: Buy, Use & Redeem</div>
+    <h2 class="serif text-3xl mt-2">Purchase points. Redeem anywhere.</h2>
+    <p class="mt-2 text-sandstone">Top up in your home currency, spend with partner merchants worldwide, and cash out to bank—securely and in real time.</p>
+  </div>
+
+  <!-- 4.2 Reward Point Purchase -->
+  <div class="grid md:grid-cols-2 gap-6 mt-10">
+    <div class="card p-6 shadow-soft border-t-4 border-t-picton-blue">
+      <div class="text-2xl font-semibold">Buy points in your currency</div>
+      <ul class="mt-3 text-gray-700 space-y-2 text-sm">
+        <li>Purchase points via web or app in your home currency.</li>
+        <li>Secure payment gateway with UPI, debit/credit cards & other supported modes.</li>
+        <li>Encrypted processing for every transaction.</li>
+      </ul>
+    </div>
+    <div class="card p-6 shadow-soft">
+      <div class="text-2xl font-semibold">Welcome bonus on first buy</div>
+      <p class="mt-2 text-gray-700 text-sm">Get a predefined welcome bonus in reward points after your first successful point purchase using code NEW1313 by 31 December 2025, and complete your first qualifying transaction by 30 June 2026.</p>
+    </div>
+  </div>
+
+  <!-- 4.3 Reward Point Usage & Redemption -->
+  <div class="grid lg:grid-cols-3 gap-6 mt-6">
+    <!-- Merchant Partner Usage -->
+    <div class="card p-6 shadow-soft">
+      <div class="text-2xl font-semibold">Use with partner merchants</div>
+      <ul class="mt-3 text-gray-700 space-y-2 text-sm">
+        <li>Spend points at onboarded partners—online and in physical stores.</li>
+        <li>Earn <strong>HJ Points on usage</strong> when redeeming with partners.</li>
+      </ul>
+    </div>
+
+    <!-- Global Redemption & FX -->
+    <div class="card p-6 shadow-soft">
+      <div class="text-2xl font-semibold">Global redemption & Currency exchange</div>
+      <ul class="mt-3 text-gray-700 space-y-2 text-sm">
+        <li>Redeem points worldwide at any partner location.</li>
+        <li>See values converted and displayed in the merchant’s local currency.</li>
+        <li>Real-time exchange rates applied during redemption.</li>
+      </ul>
+    </div>
+
+    <!-- Coupon Redemption -->
+    <div class="card p-6 shadow-soft">
+      <div class="text-2xl font-semibold">Coupon redemption</div>
+      <ul class="mt-3 text-gray-700 space-y-2 text-sm">
+        <li>Redeem points for in-app coupons.</li>
+        <li>Choose fixed-value coupons or set your own value at redemption.</li>
+        <li>Automatic adjustment to the merchant’s local currency.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- QR Redemption (Physical) + Online Checkout -->
+  <div class="grid md:grid-cols-2 gap-6 mt-6">
+    <!-- Physical Store (QR) -->
+    <div class="card p-6 shadow-soft">
+      <div class="text-2xl font-semibold">In-store QR redemption</div>
+      <ul class="mt-3 text-gray-700 space-y-2 text-sm">
+        <li><strong>Merchant app:</strong> generate a <em>dynamic QR</em> for the exact HJ Points</li>
+        <li><strong>Customer app:</strong> scan the QR to initiate redemption.</li>
+        <li>Authenticate via PIN/biometric to confirm.</li>
+      </ul>
+    </div>
+
+    <!-- Online Store -->
+    <div class="card p-6 shadow-soft">
+      <div class="text-2xl font-semibold">Online checkout redemption</div>
+      <ul class="mt-3 text-gray-700 space-y-2 text-sm">
+        <li>Integrated with partner e-commerce to redeem points at checkout.</li>
+        <li>Supports <em>dynamic QR</em>/secure handoff for authorization.</li>
+        <li>Authenticate in app via PIN/biometric to complete payment.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Point to Bank -->
+  <div class="card p-6 shadow-soft mt-6 border-t-4 border-t-fruit-salad">
+    <div class="text-2xl font-semibold">Point-to-bank transfer</div>
+    <ul class="mt-3 text-gray-700 space-y-2 text-sm">
+      <li>Customers and merchants can transfer Reward point balances to bank accounts.</li>
+      <li>Points converted to home currency using real-time currency exchange rates.</li>
+      <li>Secure payouts via integrated banking/payment rails.</li>
+    </ul>
+  </div>
+
+  <div class="text-center mt-8">
+    <a href="/customer.html" class="px-5 py-2 pill bg-picton-blue text-white hover:bg-astronaut">Start buying & redeeming</a>
+  </div>
+</section>
+
+
+  <!-- CONTACT CTA (pre-footer) -->
+<section class="bg-picton-blue text-shark">
+  <div class="container mx-auto container-tight px-4 py-12 text-center">
+    <h3 class="serif text-2xl md:text-3xl font-semibold">
+      Need help? The HJ Rewards team is here for you.
+    </h3>
+    <div class="mt-6">
+      <a href="#contact" class="inline-block px-6 py-3 pill bg-white text-shark font-semibold hover:bg-white/90">Contact us</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- LINKS STRIP (centered, two-row design) -->
+<section class="bg-white">
+  <div class="container mx-auto container-tight px-4 py-10">
+    <ul class="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-base font-medium">
+      <!-- Row 1 -->
+      <li><a class="text-astronaut hover:underline" href="#">Help Center</a></li>
+      <li><a class="text-astronaut hover:underline" href="#">Cookie Policy</a></li>
+      <li><a class="text-astronaut hover:underline" href="#">Privacy Policy</a></li>
+      <li><a class="text-astronaut hover:underline" href="#">Accessibility Statement</a></li>
+      <li><a class="text-astronaut hover:underline" href="#">Terms and Conditions</a></li>
+      <!-- Row 2 -->
+      <li><a class="text-astronaut hover:underline" href="#">Payment & Security Policy</a></li>
+      <li><a class="text-astronaut hover:underline" href="#">Refund & Cancellation Policy</a></li>
+      <li><a class="text-astronaut hover:underline" href="#">Fraud Prevention & Security Statement</a></li>
+      <li><a class="text-astronaut hover:underline" href="#">Transaction Documents</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- BOTTOM BAR (grey with icons & copyright) -->
+<footer class="bg-gray-300 text-shark">
+  <div class="container mx-auto container-tight px-4 h-20 flex items-center justify-center">
+    <!-- Socials -->
+    <!-- <div class="flex items-center gap-4">
+      <a aria-label="Facebook" href="#" class="h-10 w-10 rounded-full bg-white grid place-content-center hover:bg-white/90">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+          <path d="M22 12.06C22 6.53 17.52 2 12 2S2 6.53 2 12.06c0 5.02 3.66 9.19 8.44 9.94v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34V22c4.78-.75 8.44-4.92 8.44-9.94Z"/>
+        </svg>
+      </a>
+      <a aria-label="Email" href="mailto:contactus@wiirewards.com" class="h-10 w-10 rounded-full bg-white grid place-content-center hover:bg-white/90">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/>
+        </svg>
+      </a>
+    </div> -->
+
+    <!-- Copyright -->
+    <div class="text-sm  text-shark/80">
+      HJ Rewards Limited© <span id="yr"></span>. All rights reserved.
+    </div>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+
+
+  <!-- Partners build + shared JS -->
+  <script>
+    const dests = [
+      {title:"Retail Stores", blurb:"Fashion, electronics & more.", img:"https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1200&auto=format&fit=crop"},
+      {title:"Restaurants", blurb:"Global cuisine & dining.", img:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"},
+      {title:"Hotels & Resorts", blurb:"Luxury stays worldwide.", img:"https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"},
+      {title:"Entertainment", blurb:"Movies, events & attractions.", img:"https://images.unsplash.com/photo-1585699324551-f6c309eedeca?q=80&w=1200&auto=format&fit=crop"},
+      {title:"Home & Lifestyle", blurb:"Home, cruises & tours.", img:"https://images.unsplash.com/photo-1594026112499-ac6e20b2c480?q=80&w=1303&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+      {title:"Wellness", blurb:"Spas, fitness & health.", img:"https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop"},
+      {title:"Online Shopping", blurb:"E-commerce & Market Places.", img:"https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop"},
+      {  title: "Pet Shop & Supplies",blurb: "Everything your furry, feathery, and scaly friends need.",img: "https://images.unsplash.com/photo-1556276450-3f42cb48f776?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+      {  title: "Beauty & Personal Care",  blurb: "Beauty, wellness, and personal care partners.",img: "https://plus.unsplash.com/premium_photo-1664049362632-fa2abdf16064?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
+        ];
+    const grid = document.getElementById('dest-grid');
+    grid.innerHTML = dests.map(d => `
+      <div class="card p-6 shadow-soft border-t-4 border-t-picton-blue hover:shadow-lg transition">
+        <img src="${d.img}" alt="${d.title}" class="w-full h-48 object-cover rounded-lg mb-4" />
+        <div class="text-2xl font-semibold mb-2">${d.title}</div>
+        <p class="text-gray-600 text-sm mb-3">${d.blurb}</p>
+      </div>
+    `).join('');
+  </script>
+  <script src="/js/app.js"></script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-gray-900 bg-opacity-95 text-white p-4 shadow-2xl z-50" style="display: none;">
+    <div class="container mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex-1">
+        <p class="text-sm">
+          This website uses cookies to enhance your browsing experience. By continuing to use this site, you consent to our use of cookies. 
+          <a href="/privacy.html" class="text-picton-blue hover:underline">Learn more about our privacy policy</a>.
+        </p>
+      </div>
+      <div class="flex gap-3">
+        <button id="decline-cookies" class="px-4 py-2 rounded-md text-sm bg-gray-600 hover:bg-gray-700 transition-colors">
+          Decline
+        </button>
+        <button id="accept-cookies" class="px-4 py-2 rounded-md text-sm bg-picton-blue hover:bg-astronaut transition-colors">
+          Accept Cookies
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const cookieConsent = document.getElementById('cookie-consent');
+      const acceptBtn = document.getElementById('accept-cookies');
+      const declineBtn = document.getElementById('decline-cookies');
+
+      // Check if user has already made a choice
+      const cookieChoice = localStorage.getItem('cookieConsent');
+      
+      if (!cookieChoice) {
+        showCookieConsent();
+      }
+
+      function showCookieConsent() {
+        cookieConsent.style.display = 'block';
+      }
+
+      function hideCookieConsent() {
+        cookieConsent.style.display = 'none';
+      }
+
+      acceptBtn.addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        hideCookieConsent();
+        // Here you can initialize analytics or other cookie-dependent services
+      });
+
+      declineBtn.addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'declined');
+        hideCookieConsent();
+        // Optionally: disable certain features that require cookies
+      });
+    });
+  </script>
+</body>
+</html>

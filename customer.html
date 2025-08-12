@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join HJ Points</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'picton-blue': '#52c1e2',
+        'shark': '#232425',
+        'swirl': '#d3cec8',
+        'sandstone': '#7a736a',
+        'san-marino': '#4b62a6',
+        'astronaut': '#253871',
+        'blue-bayoux': '#446774',
+        'crater-brown': '#4b2c28',
+        'outer-space': '#324845',
+        'fruit-salad': '#509574'
+      }
+    }
+  }
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html,body{font-family:Inter,system-ui,sans-serif}
+    .container-tight{max-width:1100px}
+  </style>
+</head>
+<body class="bg-swirl text-shark">
+<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+  <div class="container mx-auto px-4 container-tight h-16 flex items-center justify-between">
+    <a href="/index.html" class="flex items-center gap-2">
+      <img src="./asset/logo1.png" class="w-auto h-14" alt="HJ Points logo"/><span class="font-semibold">Loyalty & Rewards</span>
+    </a>
+    <a href="/merchant.html" class="px-4 py-2 bg-picton-blue border rounded-full">Merchant Sign Up</a>
+  </div>
+</header>
+
+<main class="container mx-auto px-4 container-tight py-12">
+  <div class="grid md:grid-cols-2 gap-8">
+    <!-- LEFT: Promo + Customer Benefits -->
+    <section class="bg-white border rounded-2xl p-8 shadow-sm">
+      <h1 class="text-3xl font-bold">Create your account</h1>
+      <p class="mt-2 text-gray-700">Sign up and get <span class="font-semibold">1000 bonus points</span> today.</p>
+
+      <!-- PROMO CARD -->
+      <!-- PROMO CARD -->
+<div class="mt-6 rounded-2xl border overflow-hidden">
+  <div class="bg-astronaut text-white p-5">
+    <div class="text-sm uppercase tracking-widest text-white/80">Limited-time offer</div>
+    <h2 class="text-2xl font-semibold mt-1">Enjoy up to 1,000  HJ Points</h2>
+    <p class="mt-2 text-white/90">
+      This is your chance to unlock exclusive rewards. Earn bonus HJ Points when you join with the enrolment code
+      <span class="font-semibold underline">NEW1313</span> by <strong>31 December 2025</strong>, and complete your first
+      qualifying transaction by <strong>30 June 2026</strong>.
+    </p>
+  </div>
+  <div class="p-5">
+    <ul class="list-disc pl-6 text-gray-700 space-y-2">
+      <!-- <li>Collect <strong>2,000 bonus</strong> HJ Loyalty &amp; Rewards after your first <em>qualifying booking or purchase</em> in an Economy/Standard tier (e.g.hotels, car hire, experiences, shopping, dining, and more).* </li>
+      <li>Collect <strong>4,000 bonus</strong> HJ Loyalty &amp; Rewards after your first <em>qualifying booking or purchase</em> in a Premium/Business/First tier where applicable.*</li>
+      <li>Spend your HJ Loyalty &amp; Rewards globally on hotels, car hire, experiences, upgrades, gift cards, and shopping &amp; dining across our partner network .</li> -->
+    </ul>
+    <p class="mt-3 text-xs text-sandstone">*Terms and conditions apply. Qualifying categories and partner eligibility vary by market.</p>
+  </div>
+</div>
+
+
+      <!-- CUSTOMER BENEFITS -->
+      <div class="mt-8">
+        <h3 class="text-xl font-semibold">Member benefits you’ll love</h3>
+        <div class="mt-4 grid grid-cols-1 gap-3">
+          <div class="p-4 bg-swirl rounded-xl border">
+            <div class="font-semibold">Earn everywhere</div>
+            <p class="text-gray-700 text-sm mt-1">Collect points on daily purchases across retail, dining, wellness and more.</p>
+          </div>
+          <div class="p-4 bg-swirl rounded-xl border">
+            <div class="font-semibold">Redeem globally</div>
+            <p class="text-gray-700 text-sm mt-1">Use HJ Points for hotel upgrades, shopping, dining and experiences worldwide.</p>
+          </div>
+          <div class="p-4 bg-swirl rounded-xl border">
+            <div class="font-semibold">Affiliate voucher purchase and redemptions</div>
+            <p class="text-gray-700 text-sm mt-1">Use HJ Points to buy vouchers of affiliate merchants for online or offline purchases.</p>
+          </div>
+          <div class="p-4 bg-swirl rounded-xl border">
+            <div class="font-semibold">Member-only offers</div>
+            <p class="text-gray-700 text-sm mt-1">Access exclusive rates, seasonal promos, and surprise bonus events.</p>
+          </div>
+          <div class="p-4 bg-swirl rounded-xl border">
+            <div class="font-semibold">Multi-currency exchange</div>
+            <p class="text-gray-700 text-sm mt-1">Choose your preferred currency and see transparent value at checkout.</p>
+          </div>
+          <div class="p-4 bg-swirl rounded-xl border">
+            <div class="font-semibold">Customer Cash-Out options</div>
+            <p class="text-gray-700 text-sm mt-1">Customers can Cash-Out their earned HJ Points and point purchase directly subject to eligibility.</p>
+          </div>          
+          <div class="p-4 bg-swirl rounded-xl border">
+            <div class="font-semibold">Priority support</div>
+            <p class="text-gray-700 text-sm mt-1">Get help fast from our dedicated member care team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: Sign-up Form -->
+    <section class="bg-white border rounded-2xl p-8 shadow-sm">
+      <form id="customer-form" class="grid md:grid-cols-2 gap-4" novalidate>
+        <div class="md:col-span-2">
+          <h2 class="text-2xl font-semibold">Join HJ Points</h2>
+          <p class="mt-1 text-gray-700">It takes less than a minute to get started.</p>
+        </div>
+
+        <div>
+          <label class="text-sm text-gray-600">Full name</label>
+          <input required name="name" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="Ankit Sharma" />
+        </div>
+        <div>
+          <label class="text-sm text-gray-600">Email</label>
+          <input required type="email" name="email" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="you@example.com" />
+        </div>
+        <div>
+          <label class="text-sm text-gray-600">Phone</label>
+          <input required name="phone" pattern="\\d{10,}" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="10+ digits" />
+        </div>
+        <div>
+          <label class="text-sm text-gray-600">Preferred currency</label>
+          <select name="currency" class="mt-1 w-full rounded-lg border px-3 py-2">
+            <option value="INR">INR</option><option value="USD">USD</option><option value="EUR">EUR</option>
+          </select>
+        </div>
+        <div class="md:col-span-2">
+          <label class="text-sm text-gray-600">Password</label>
+          <input required minlength="6" type="password" name="password" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="6+ characters" />
+        </div>
+        <div class="md:col-span-2">
+          <label class="text-sm text-gray-600">Referral code (optional)</label>
+          <input name="referral" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="ABC123" />
+        </div>
+
+        <!-- Promo code helper -->
+        <div class="md:col-span-2 p-4 rounded-xl bg-blue-50 border border-blue-200 text-blue-900">
+          Use enrolment code <span class="font-semibold">NEW1313</span> to be eligible for the bonus HJ Points offer.
+        </div>
+
+        <div class="md:col-span-2 flex items-start gap-2 text-sm">
+          <input type="checkbox" id="agree" required class="mt-1"/>
+          <label for="agree">
+            I agree to the <a class="text-picton-blue underline" href="#">Terms</a> and allow contact for program updates.
+          </label>
+        </div>
+
+        <div class="md:col-span-2 mt-2">
+          <button class="w-full md:w-auto px-5 py-3 rounded-full bg-picton-blue text-white hover:bg-astronaut">Create account</button>
+        </div>
+      </form>
+
+      <div id="customer-success" class="hidden mt-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800">
+        ✅ Thanks for registering! We’ve sent a confirmation email.
+      </div>
+
+      <!-- Tiny legal note under form for clarity -->
+      <p class="mt-6 text-xs text-sandstone">
+        *Bonus HJ Points offer valid for members who enroll with code NEW1313 by 31 December 2025 and complete your first qualifying transaction by 30 June 2026.
+        Additional terms and conditions apply.
+      </p>
+    </section>
+  </div>
+</main>
+
+<footer class="mt-16 border-t bg-astronaut text-white">
+  <div class="container mx-auto px-4 container-tight py-8 text-sm">
+    © <span id="yr"></span> HJ Rewards Limited. All rights reserved.
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script src="/js/app.js"></script>
+</body>
+</html>

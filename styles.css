@@ -1,0 +1,58 @@
+:root {
+  /* CSS HEX */ 
+  --picton-blue: #52c1e2; 
+  --shark: #232425; 
+  --swirl: #d3cec8; 
+  --sandstone: #7a736a; 
+  --san-marino: #4b62a6; 
+  --astronaut: #253871; 
+  --blue-bayoux: #446774; 
+  --crater-brown: #4b2c28; 
+  --outer-space: #324845; 
+  --fruit-salad: #509574; 
+}
+
+/* Base styles */
+html, body { 
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
+  color: var(--shark); 
+}
+
+/* Common components */
+.btn-primary {
+  background-color: var(--picton-blue);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--astronaut);
+}
+
+.btn-secondary {
+  background-color: white;
+  border: 1px solid var(--swirl);
+}
+
+.btn-secondary:hover {
+  background-color: var(--swirl);
+}
+
+.text-muted {
+  color: var(--sandstone);
+}
+
+.link-color {
+  color: var(--san-marino);
+}
+
+.link-color:hover {
+  color: var(--astronaut);
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(to right, var(--picton-blue), var(--san-marino));
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(to right, var(--swirl), var(--sandstone));
+}

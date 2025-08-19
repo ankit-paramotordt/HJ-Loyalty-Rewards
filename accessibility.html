@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accessibility Statement — HJ Loyalty & Rewards</title>
+    <meta
+      name="description"
+      content="Our commitment to providing an inclusive and accessible online experience for everyone."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "picton-blue": "#52c1e2",
+              shark: "#232425",
+              swirl: "#d3cec8",
+              sandstone: "#7a736a",
+              "san-marino": "#4b62a6",
+              astronaut: "#253871",
+              "blue-bayoux": "#446774",
+              "crater-brown": "#4b2c28",
+              "outer-space": "#324845",
+              "fruit-salad": "#509574",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --radius: 16px;
+      }
+      html,
+      body {
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+          sans-serif;
+        color: #232425;
+      }
+      .serif {
+        font-family: "Playfair Display", Georgia, serif;
+      }
+      .container-tight {
+        max-width: 1200px;
+      }
+      .shadow-soft {
+        box-shadow: 0 10px 30px rgba(35, 36, 37, 0.12);
+      }
+      .card {
+        border-radius: var(--radius);
+        border: 1px solid #eee;
+        background: #fff;
+      }
+      .pill {
+        border-radius: 9999px;
+      }
+    </style>
+  </head>
+  <body class="bg-picton-blue/5 text-shark">
+    <!-- NAV -->
+    <header
+      class="sticky top-0 z-40 bg-picton-blue/10 backdrop-blur border-b border-picton-blue/20"
+    >
+      <div
+        class="container mx-auto px-4 container-tight h-16 flex items-center justify-between"
+      >
+        <a href="/index.html" class="flex items-center">
+          <img src="./asset/logo1.png" alt="logo" class="h-14 w-auto" />
+          <span class="font-semibold tracking-wide">Loyalty & Rewards</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="/index.html#benefits" class="hover:text-picton-blue">Benefits</a>
+          <a href="/index.html#tiers" class="hover:text-picton-blue">Tiers</a>
+          <a href="/index.html#partners" class="hover:text-picton-blue">Partners</a>
+          <a href="/index.html#points" class="hover:text-picton-blue">Buy Points</a>
+          <a href="/index.html#points" class="hover:text-picton-blue">Redeem Points</a>
+        </nav>
+
+        <div class="flex items-center gap-3 md:gap-4">
+          <a
+            href="#"
+            title="Download on the App Store"
+            class="hidden lg:inline-block"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+              alt="Download on the App Store"
+              class="h-10 w-auto"
+            />
+          </a>
+          <a
+            href="#"
+            title="Get it on Google Play"
+            class="hidden lg:inline-block"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Get it on Google Play"
+              class="h-10 w-auto"
+            />
+          </a>
+
+          <a
+            href="/customer.html"
+            class="px-4 py-2 pill text-white bg-picton-blue hover:bg-astronaut whitespace-nowrap"
+          >
+            Member Sign In / Up
+          </a>
+          <a
+            href="/merchant.html"
+            class="px-4 py-2 pill text-picton-blue border border-picton-blue hover:bg-picton-blue/10 whitespace-nowrap"
+          >
+            Merchant Sign In / Up
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ACCESSIBILITY CONTENT -->
+      <section class="container mx-auto px-4 container-tight py-14">
+        <div class="max-w-4xl mx-auto">
+          <h1 class="serif text-4xl md:text-5xl font-bold text-center mb-8">
+            Accessibility Statement
+          </h1>
+
+          <div class="space-y-8 text-lg">
+            <div>
+              <h2 class="text-2xl font-semibold mb-3">1. Commitment</h2>
+              <p class="text-gray-700 leading-relaxed">
+                HJ Reward is committed to providing an inclusive and accessible online experience for everyone, including people with disabilities. Accessibility isn’t just a goal, it's part of how we design, build, and serve our community. Our website is built with reference to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA, which are widely recognized standards for digital accessibility.
+              </p>
+            </div>
+
+            <div>
+              <h2 class="text-2xl font-semibold mb-3">2. Measures Taken</h2>
+              <ol class="list-decimal list-inside text-gray-700 space-y-2 leading-relaxed">
+                <li>Regular accessibility audits;</li>
+                <li>Provision of text alternatives for non-text content;</li>
+                <li>Keyboard navigation capability;</li>
+                <li>Sufficient colour contrast and font readability.</li>
+              </ol>
+            </div>
+
+            <div>
+              <h2 class="text-2xl font-semibold mb-3">3. Feedback</h2>
+              <p class="text-gray-700 leading-relaxed">
+                Members encountering accessibility barriers may contact us at: 
+                <a href="mailto:accessibility@hjreward.com" class="text-picton-blue hover:underline">accessibility@hjreward.com</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER from index.html -->
+    <footer class="bg-gray-300 text-shark">
+        <div
+          class="container mx-auto container-tight px-4 h-20 flex items-center justify-center"
+        >
+          <div class="text-sm text-shark/80">
+            HJ Rewards Limited© <span id="yr"></span>. All rights reserved.
+          </div>
+        </div>
+        <script>
+          document.getElementById("yr").textContent = new Date().getFullYear();
+        </script>
+      </footer>
+
+  </body>
+</html>

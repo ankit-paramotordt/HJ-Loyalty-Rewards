@@ -47,15 +47,6 @@ tailwind.config = {
       <span class="font-semibold tracking-wide">Loyalty &amp; Rewards</span>
     </a>
 
-    <!-- Desktop nav -->
-    <nav id="desktopNav" class="hidden md:flex items-center gap-6 text-sm">
-      <a href="#benefits" class="hover:text-picton-blue nav-link">Benefits</a>
-      <a href="#tiers" class="hover:text-picton-blue nav-link">Tiers</a>
-      <a href="#partners" class="hover:text-picton-blue nav-link">Partners</a>
-      <a href="#points" class="hover:text-picton-blue nav-link">Buy Points</a>
-      <a href="#points" class="hover:text-picton-blue nav-link">Redeem Points</a>
-    </nav>
-
     <!-- Right actions -->
     <div class="hidden md:flex items-center gap-3 md:gap-4">
       <a
@@ -88,13 +79,6 @@ tailwind.config = {
       >
         Member Sign Up / Login
       </a>
-      <a
-        id="merchantCta"
-        href="/merchant.html"
-        class="px-4 py-2 pill text-picton-blue border border-picton-blue hover:bg-picton-blue/10 whitespace-nowrap"
-      >
-        Merchant Sign Up / Login
-      </a>
     </div>
 
     <!-- Mobile: hamburger -->
@@ -125,24 +109,13 @@ tailwind.config = {
 
     <!-- panel -->
     <div class="fixed left-0 right-0 top-16 bg-white border-t border-picton-blue/20 p-4 space-y-2 shadow-lg z-[70]">
-      <nav class="grid gap-2 text-base">
-        <a href="#benefits" class="py-2 nav-link-mobile">Benefits</a>
-        <a href="#tiers" class="py-2 nav-link-mobile">Tiers</a>
-        <a href="#partners" class="py-2 nav-link-mobile">Partners</a>
-        <a href="#points" class="py-2 nav-link-mobile">Buy Points</a>
-        <a href="#points" class="py-2 nav-link-mobile">Redeem Points</a>
-      </nav>
+
       <div class="pt-3 border-t border-picton-blue/20 grid gap-2">
         <a
           id="memberCtaMobile"
           href="/customer.html"
           class="px-4 py-2 pill text-white bg-picton-blue hover:bg-astronaut text-center"
         >Member Sign Up / Login</a>
-        <a
-          id="merchantCtaMobile"
-          href="/merchant.html"
-          class="px-4 py-2 pill text-picton-blue border border-picton-blue hover:bg-picton-blue/10 text-center"
-        >Merchant Sign Up / Login</a>
 
         <div class="flex items-center justify-center gap-3 pt-2">
           <a href="#" title="App Store">
@@ -259,3 +232,9 @@ tailwind.config = {
 <script src="/js/app.js"></script>
 </body>
 </html>
+<style>
+  html,body{font-family:Inter,system-ui,sans-serif}
+  .container-tight{max-width:1200px;}        /* match other pages */
+  .pill{border-radius:9999px;}               /* required by header CTAs */
+  /* (optional) keep your other shared utilities here: .card, .shadow-soft, .serif… */
+</style>

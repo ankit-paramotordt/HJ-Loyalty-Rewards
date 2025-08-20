@@ -56,3 +56,14 @@ html, body {
 .bg-gradient-secondary {
   background: linear-gradient(to right, var(--swirl), var(--sandstone));
 }
+.pill { border-radius: 9999px; }
+
+  /* active link style for scrollspy */
+  .active-link { color: var(--astronaut) !important; font-weight: 600; }
+
+  /* smooth scrolling for in-page anchors */
+  html:focus-within { scroll-behavior: smooth; }
+
+  /* optional: make the header shrink a bit when scrolled */
+  #siteHeader.is-scrolled #headerInner { height: 3.5rem; }
+  #siteHeader #headerInner { height: 4rem; }

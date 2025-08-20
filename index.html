@@ -9,6 +9,7 @@
       content="Earn points on every purchase. Enjoy member-only rates, tier upgrades, and global redemptions across our partners."
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./app.js" defer></script>
     <script>
       tailwind.config = {
         theme: {
@@ -86,102 +87,177 @@
   <body class="bg-picton-blue/5 text-shark">
     <!-- NAV -->
     <header
-      class="sticky top-0 z-40 bg-picton-blue/10 backdrop-blur border-b border-picton-blue/20"
-    >
-      <div
-        class="container mx-auto px-4 container-tight h-16 flex items-center justify-between"
+  id="siteHeader"
+  class="sticky top-0 z-40 border-b transition-all duration-300 will-change-transform bg-[rgba(82,193,226,.10)] border-[rgba(82,193,226,.20)] backdrop-blur"
+>
+  <div
+    id="headerInner"
+    class="container mx-auto px-4 container-tight h-16 flex items-center justify-between transition-[height] duration-300"
+  >
+    <!-- Logo + Brand -->
+    <a href="/index.html" class="flex items-center gap-2 shrink-0">
+      <img src="./asset/logo1.png" alt="logo" class="h-14 w-auto transition-all duration-300" />
+      <span class="font-semibold tracking-wide">Loyalty &amp; Rewards</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav id="desktopNav" class="hidden md:flex items-center gap-6 text-sm">
+      <a href="#benefits" class="hover:text-picton-blue nav-link">Benefits</a>
+      <a href="#tiers" class="hover:text-picton-blue nav-link">Tiers</a>
+      <a href="#partners" class="hover:text-picton-blue nav-link">Partners</a>
+      <a href="#points" class="hover:text-picton-blue nav-link">Buy Points</a>
+      <a href="#points" class="hover:text-picton-blue nav-link">Redeem Points</a>
+    </nav>
+
+    <!-- Right actions -->
+    <div class="hidden md:flex items-center gap-3 md:gap-4">
+      <a
+        href="#"
+        title="Download on the App Store"
+        class="hidden lg:inline-block"
       >
-        <a href="/index.html" class="flex items-center">
-          <img src="./asset/logo1.png" alt="logo" class="h-14 w-auto" />
-          <span class="font-semibold tracking-wide">Loyalty & Rewards</span>
-        </a>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+          alt="Download on the App Store"
+          class="h-10 w-auto"
+        />
+      </a>
+      <a
+        href="#"
+        title="Get it on Google Play"
+        class="hidden lg:inline-block"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+          alt="Get it on Google Play"
+          class="h-10 w-auto"
+        />
+      </a>
 
-        <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#benefits" class="hover:text-picton-blue">Benefits</a>
-          <a href="#tiers" class="hover:text-picton-blue">Tiers</a>
-          <a href="#partners" class="hover:text-picton-blue">Partners</a>
-          <a href="#points" class="hover:text-picton-blue">Buy Points</a>
-          <a href="#points" class="hover:text-picton-blue">Redeem Points</a>
-        </nav>
+      <a
+        id="memberCta"
+        href="/customer.html"
+        class="px-4 py-2 pill text-white bg-picton-blue hover:bg-astronaut whitespace-nowrap"
+      >
+        Member Sign Up / Login
+      </a>
+      <a
+        id="merchantCta"
+        href="/merchant.html"
+        class="px-4 py-2 pill text-picton-blue border border-picton-blue hover:bg-picton-blue/10 whitespace-nowrap"
+      >
+        Merchant Sign Up / Login
+      </a>
+    </div>
 
-        <div class="flex items-center gap-3 md:gap-4">
-          <a
-            href="#"
-            title="Download on the App Store"
-            class="hidden lg:inline-block"
-          >
+    <!-- Mobile: hamburger -->
+    <button
+      id="menuToggle"
+      class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-picton-blue/20 hover:bg-picton-blue/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-picton-blue"
+      aria-label="Open menu"
+      aria-controls="mobileMenu"
+      aria-expanded="false"
+      type="button"
+    >
+      <!-- burger icon -->
+      <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <!-- close icon -->
+      <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu (drawer) -->
+  <div id="mobileMenu" class="md:hidden hidden">
+    <!-- backdrop -->
+    <div id="mobileBackdrop" class="fixed inset-0 bg-black/30 backdrop-blur-md z-[60]"></div>
+
+    <!-- panel -->
+    <div class="fixed left-0 right-0 top-16 bg-white border-t border-picton-blue/20 p-4 space-y-2 shadow-lg z-[70]">
+      <nav class="grid gap-2 text-base">
+        <a href="#benefits" class="py-2 nav-link-mobile">Benefits</a>
+        <a href="#tiers" class="py-2 nav-link-mobile">Tiers</a>
+        <a href="#partners" class="py-2 nav-link-mobile">Partners</a>
+        <a href="#points" class="py-2 nav-link-mobile">Buy Points</a>
+        <a href="#points" class="py-2 nav-link-mobile">Redeem Points</a>
+      </nav>
+      <div class="pt-3 border-t border-picton-blue/20 grid gap-2">
+        <a
+          id="memberCtaMobile"
+          href="/customer.html"
+          class="px-4 py-2 pill text-white bg-picton-blue hover:bg-astronaut text-center"
+        >Member Sign Up / Login</a>
+        <a
+          id="merchantCtaMobile"
+          href="/merchant.html"
+          class="px-4 py-2 pill text-picton-blue border border-picton-blue hover:bg-picton-blue/10 text-center"
+        >Merchant Sign Up / Login</a>
+
+        <div class="flex items-center justify-center gap-3 pt-2">
+          <a href="#" title="App Store">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
               alt="Download on the App Store"
               class="h-10 w-auto"
             />
           </a>
-          <a
-            href="#"
-            title="Get it on Google Play"
-            class="hidden lg:inline-block"
-          >
+          <a href="#" title="Google Play">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
               alt="Get it on Google Play"
               class="h-10 w-auto"
             />
           </a>
-
-          <a
-            href="/customer.html"
-            class="px-4 py-2 pill text-white bg-picton-blue hover:bg-astronaut whitespace-nowrap"
-          >
-            Member Sign Up / Login
-          </a>
-          <a
-            href="/merchant.html"
-            class="px-4 py-2 pill text-picton-blue border border-picton-blue hover:bg-picton-blue/10 whitespace-nowrap"
-          >
-            Merchant Sign Up / Login
-          </a>
         </div>
       </div>
-    </header>
+    </div>
+  </div>
 
     <main>
       <!-- HERO -->
-      <section class="relative h-[400px] md:h-[560px] lg:h-[700px]">
-        <div class="absolute inset-0">
-          <img
-            src="./asset/Untitled-2.png"
-            class="w-full h-full object-cover"
-            alt="Loyalty Program"
-          />
-          <div class="absolute inset-0 overlay-gradient"></div>
-        </div>
-        <div
-          class="container mx-auto px-4 container-tight relative h-full flex items-center"
-        >
-          <div class="max-w-xl text-white">
-            <h1 class="serif text-5xl leading-tight">
-              Become a member. Earn more. Redeem globally.
-            </h1>
-            <p class="mt-4 text-lg text-white/90">
-              Get rewarded every time you shop with our global partners. The
-              more you earn, the more perks you unlock—like special rates,
-              upgrades, and experiences.
-            </p>
-            <div class="mt-6 flex gap-3">
-              <a
-                href="/customer.html"
-                class="px-6 py-3 pill bg-picton-blue text-white hover:bg-astronaut"
-                >Join for free</a
-              >
-              <a
-                href="#benefits"
-                class="px-6 py-3 pill bg-white text-shark hover:bg-white/90"
-                >How it works</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
+<section class="relative h-[400px] md:h-[560px] lg:h-[700px]">
+  <div class="absolute inset-0">
+    <img
+      src="./asset/Untitled-2.png"
+      class="w-full h-full object-cover"
+      alt="Loyalty Program"
+    />
+    <!-- desktop overlay (unchanged), hidden on mobile -->
+    <div class="absolute inset-0 overlay-gradient hidden sm:block"></div>
+    <!-- mobile-only stronger overlay for readability -->
+    <div class="absolute inset-0 sm:hidden bg-gradient-to-r from-astronaut/80 via-astronaut/40 to-transparent"></div>
+  </div>
+
+  <div class="container mx-auto px-4 container-tight relative h-full flex items-center">
+    <div class="text-white max-w-[22rem] sm:max-w-xl">
+      <!-- smaller heading on mobile; desktop unchanged -->
+      <h1 class="serif text-3xl sm:text-5xl leading-tight">
+        Become a member. Earn more. Redeem globally.
+      </h1>
+
+      <!-- smaller paragraph on mobile; desktop unchanged -->
+      <p class="mt-3 sm:mt-4 text-base sm:text-lg text-white/90">
+        Get rewarded every time you shop with our global partners. The more you earn, the more perks you unlock—like special rates, upgrades, and experiences.
+      </p>
+
+      <!-- stack buttons on mobile; row on ≥ sm -->
+      <div class="mt-5 sm:mt-6 flex flex-col sm:flex-row gap-3">
+        <a
+          href="/customer.html"
+          class="px-6 py-3 pill bg-picton-blue text-white hover:bg-astronaut w-full sm:w-auto text-center"
+        >Join for free</a>
+        <a
+          href="#benefits"
+          class="px-6 py-3 pill bg-white text-shark hover:bg-white/90 w-full sm:w-auto text-center"
+        >How it works</a>
+      </div>
+    </div>
+  </div>
+</section>
 
       <!-- FEATURES -->
       <section

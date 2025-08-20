@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Onboard your business — HJ Loyalty & Rewards</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./app.js"></script>
   <script>
 tailwind.config = {
   theme: {
@@ -31,17 +32,138 @@ tailwind.config = {
   <style>html,body{font-family:Inter,system-ui,sans-serif}.container-tight{max-width:1100px}</style>
 </head>
 <body class="bg-swirl text-shark">
-<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
-  <div class="container mx-auto px-4 container-tight h-16 flex items-center justify-between">
-    <a href="/index.html" class="flex items-center gap-2">
-      <img src="./asset/logo1.png" class="w-auto h-14"/><span class="font-semibold">Loyalty & Rewards</span>
+<!-- NAV -->
+    <header
+  id="siteHeader"
+  class="sticky top-0 z-40 border-b transition-all duration-300 will-change-transform bg-[rgba(82,193,226,.10)] border-[rgba(82,193,226,.20)] backdrop-blur"
+>
+  <div
+    id="headerInner"
+    class="container mx-auto px-4 container-tight h-16 flex items-center justify-between transition-[height] duration-300"
+  >
+    <!-- Logo + Brand -->
+    <a href="/index.html" class="flex items-center gap-2 shrink-0">
+      <img src="./asset/logo1.png" alt="logo" class="h-14 w-auto transition-all duration-300" />
+      <span class="font-semibold tracking-wide">Loyalty &amp; Rewards</span>
     </a>
-    <div class="flex items-center gap-3">
-      <!-- <a href="#merchant-benefits" class="hidden md:inline-block px-4 py-2 border rounded-full">Benefits</a> -->
-      <a href="/customer.html" class="px-4 py-2 bg-picton-blue border rounded-full">Member Sign UP </a>
+
+    <!-- Desktop nav -->
+    <nav id="desktopNav" class="hidden md:flex items-center gap-6 text-sm">
+      <a href="#benefits" class="hover:text-picton-blue nav-link">Benefits</a>
+      <a href="#tiers" class="hover:text-picton-blue nav-link">Tiers</a>
+      <a href="#partners" class="hover:text-picton-blue nav-link">Partners</a>
+      <a href="#points" class="hover:text-picton-blue nav-link">Buy Points</a>
+      <a href="#points" class="hover:text-picton-blue nav-link">Redeem Points</a>
+    </nav>
+
+    <!-- Right actions -->
+    <div class="hidden md:flex items-center gap-3 md:gap-4">
+      <a
+        href="#"
+        title="Download on the App Store"
+        class="hidden lg:inline-block"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+          alt="Download on the App Store"
+          class="h-10 w-auto"
+        />
+      </a>
+      <a
+        href="#"
+        title="Get it on Google Play"
+        class="hidden lg:inline-block"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+          alt="Get it on Google Play"
+          class="h-10 w-auto"
+        />
+      </a>
+
+      <a
+        id="memberCta"
+        href="/customer.html"
+        class="px-4 py-2 pill text-white bg-picton-blue hover:bg-astronaut whitespace-nowrap"
+      >
+        Member Sign Up / Login
+      </a>
+      <a
+        id="merchantCta"
+        href="/merchant.html"
+        class="px-4 py-2 pill text-picton-blue border border-picton-blue hover:bg-picton-blue/10 whitespace-nowrap"
+      >
+        Merchant Sign Up / Login
+      </a>
     </div>
+
+    <!-- Mobile: hamburger -->
+    <button
+      id="menuToggle"
+      class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-picton-blue/20 hover:bg-picton-blue/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-picton-blue"
+      aria-label="Open menu"
+      aria-controls="mobileMenu"
+      aria-expanded="false"
+      type="button"
+    >
+      <!-- burger icon -->
+      <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <!-- close icon -->
+      <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
   </div>
 </header>
+
+<!-- Mobile menu (drawer) -->
+  <div id="mobileMenu" class="md:hidden hidden">
+    <!-- backdrop -->
+    <div id="mobileBackdrop" class="fixed inset-0 bg-black/30 backdrop-blur-md z-[60]"></div>
+
+    <!-- panel -->
+    <div class="fixed left-0 right-0 top-16 bg-white border-t border-picton-blue/20 p-4 space-y-2 shadow-lg z-[70]">
+      <nav class="grid gap-2 text-base">
+        <a href="#benefits" class="py-2 nav-link-mobile">Benefits</a>
+        <a href="#tiers" class="py-2 nav-link-mobile">Tiers</a>
+        <a href="#partners" class="py-2 nav-link-mobile">Partners</a>
+        <a href="#points" class="py-2 nav-link-mobile">Buy Points</a>
+        <a href="#points" class="py-2 nav-link-mobile">Redeem Points</a>
+      </nav>
+      <div class="pt-3 border-t border-picton-blue/20 grid gap-2">
+        <a
+          id="memberCtaMobile"
+          href="/customer.html"
+          class="px-4 py-2 pill text-white bg-picton-blue hover:bg-astronaut text-center"
+        >Member Sign Up / Login</a>
+        <a
+          id="merchantCtaMobile"
+          href="/merchant.html"
+          class="px-4 py-2 pill text-picton-blue border border-picton-blue hover:bg-picton-blue/10 text-center"
+        >Merchant Sign Up / Login</a>
+
+        <div class="flex items-center justify-center gap-3 pt-2">
+          <a href="#" title="App Store">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+              alt="Download on the App Store"
+              class="h-10 w-auto"
+            />
+          </a>
+          <a href="#" title="Google Play">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Get it on Google Play"
+              class="h-10 w-auto"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <main class="container mx-auto px-4 container-tight py-12">
   <div class="grid md:grid-cols-2 gap-8">
     

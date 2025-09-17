@@ -619,7 +619,7 @@
             <a class="text-astronaut hover:underline" id="cookie-settings-footer-link" href="#">Cookie Settings</a>
           </li>
           <li>
-            <a class="text-astronaut hover:underline" href="accessibility.html">Accessibility Statement</a>
+            <a class="text-astronaut hover:underline" href="accessibility_statement.html">Accessibility Statement</a>
           </li>
            <li>
             <a class="text-astronaut hover:underline" href="#">Terms and Conditions</a>
@@ -739,14 +739,19 @@
     <!-- MODIFIED COOKIE CONSENT BANNER -->
     <div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 bg-opacity-95 text-white p-4 shadow-2xl z-50" style="display: none;">
       <div class="container mx-auto max-w-7xl">
-          <h2 class="text-lg font-bold mb-2">Your Privacy Matters</h2>
+          <h2 class="text-lg font-bold mb-2">Your Privacy and Cookie Preferences</h2>
           <p class="text-sm mb-4">
-              We use cookies and similar technologies to make our website work, improve your browsing experience, analyze site usage, and deliver relevant advertising. By clicking "Accept All," you agree to the storing of all cookies on your device.
-              You can choose to adjust your cookie preferences by clicking the Cookie Settings button to allow only specific types of cookies or learn more in our <a href="/cookie.html" class="text-picton-blue hover:underline">Cookie Policy</a>.
+              HJ Reward Limited (“HJ Reward”, “we”, “us”, or “our”) uses cookies and similar
+              technologies to operate our website, improve user experience, analyze site usage,
+              and deliver relevant advertising in accordance with our <a href="/cookie.html" class="text-picton-blue hover:underline">[Cookie Policy]</a>.
+              By selecting “Accept All”, you consent to the use of all categories of cookies. You
+              may choose to reject non-essential cookies by selecting “Reject Non-Essential
+              Cookies”. At any time, you may adjust your preferences through the “Cookie
+              Settings” link in the footer of our website.
           </p>
           <div class="flex flex-col sm:flex-row gap-3">
               <button id="accept-all-cookies" class="px-5 py-2 rounded-md text-sm bg-picton-blue hover:bg-astronaut transition-colors flex-1">Accept All</button>
-              <button id="reject-non-essential-cookies" class="px-5 py-2 rounded-md text-sm bg-gray-600 hover:bg-gray-700 transition-colors flex-1">Reject Non-Essential</button>
+              <button id="reject-non-essential-cookies" class="px-5 py-2 rounded-md text-sm bg-gray-600 hover:bg-gray-700 transition-colors flex-1">Reject Non-Essential Cookies</button>
               <button id="cookie-settings-button" class="px-5 py-2 rounded-md text-sm bg-gray-200 text-gray-800 hover:bg-gray-300 transition-colors flex-1">Cookie Settings</button>
           </div>
       </div>
@@ -757,32 +762,34 @@
         <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 w-11/12 max-w-2xl max-h-[90vh] overflow-y-auto">
             <h2 class="text-2xl font-bold mb-2">Manage Your Cookie Preferences</h2>
             <p class="text-sm text-gray-600 mb-6">
-                We respect your privacy and provide you with the option to control your cookie settings. Choose which categories of cookies you would like to accept. You can update your preferences at any time by clicking the Cookie Preferences link in the footer of our website.
+                We respect your privacy and provide the ability to manage your cookie preferences.
+                You may choose which categories of cookies to enable. Preferences can be updated
+                at any time via the “Cookie Settings” link in the website footer.
             </p>
 
             <div class="space-y-4">
                 <!-- Strictly Necessary Cookies -->
                 <div class="border p-4 rounded-lg">
                     <div class="flex justify-between items-center">
-                        <h3 class="font-semibold">Strictly Necessary Cookies (Always Active)</h3>
+                        <h3 class="font-semibold">Strictly Necessary Cookies</h3>
                         <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
                             <input type="checkbox" id="necessary-cookies" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-not-allowed" checked disabled />
                             <label for="necessary-cookies" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-not-allowed"></label>
                         </div>
                     </div>
-                    <p class="text-xs text-gray-500 mt-2">These cookies are essential for the operation of our website and cannot be disabled. They are used to perform actions such as logging in, filling in forms, or saving privacy preferences.</p>
+                    <p class="text-xs text-gray-500 mt-2">Essential for website operation and cannot be disabled. Examples: Session cookies, security authentication cookies</p>
                 </div>
 
                 <!-- Performance & Analytics Cookies -->
                 <div class="border p-4 rounded-lg">
                     <div class="flex justify-between items-center">
-                        <h3 class="font-semibold">Performance & Analytics Cookies</h3>
+                        <h3 class="font-semibold">Performance and Analytics Cookies</h3>
                          <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
                             <input type="checkbox" id="performance-cookies" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
                             <label for="performance-cookies" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
                         </div>
                     </div>
-                    <p class="text-xs text-gray-500 mt-2">These cookies help us understand how visitors interact with our site by collecting anonymous data. This helps us improve performance and functionality.</p>
+                    <p class="text-xs text-gray-500 mt-2">Collect anonymous data to improve site performance. Examples: Google Analytics, site speed monitoring</p>
                 </div>
 
                 <!-- Functionality Cookies -->
@@ -794,24 +801,27 @@
                             <label for="functionality-cookies" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
                         </div>
                     </div>
-                    <p class="text-xs text-gray-500 mt-2">These cookies enable enhanced website functionality and allow us to personalize your experience by remembering your preferences and settings.</p>
+                    <p class="text-xs text-gray-500 mt-2">Enable features and personalization. Examples: Language preference cookies, saved login details</p>
                 </div>
 
                 <!-- Targeting & Advertising Cookies -->
                 <div class="border p-4 rounded-lg">
                     <div class="flex justify-between items-center">
-                        <h3 class="font-semibold">Targeting & Advertising Cookies</h3>
+                        <h3 class="font-semibold">Targeting and Advertising Cookies</h3>
                         <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
                             <input type="checkbox" id="targeting-cookies" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
                             <label for="targeting-cookies" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
                         </div>
                     </div>
-                    <p class="text-xs text-gray-500 mt-2">These cookies are set by advertising partners and help build a profile of your interests in order to show you relevant advertisements.</p>
+                    <p class="text-xs text-gray-500 mt-2">Build a profile for relevant ads. Examples: Facebook Pixel, Google Ads remarketing cookies</p>
                 </div>
             </div>
             
             <div class="mt-6 text-xs text-gray-500">
-                <p>We will store your consent timestamp, IP address, and selected preferences in a secure database to maintain an accurate record of your consent. Logs of your consent will be retained for at least 13 months to comply with GDPR audit requirements. You may withdraw your consent at any time by revisiting the Cookie Preferences panel.</p>
+                <p>For GDPR compliance, HJ Reward will securely store a record of each user's cookie
+                preferences, including timestamp, IP address, and selected settings.
+                Records are retained for a minimum of 13 months.
+                Consent may be withdrawn at any time by revisiting the Cookie Settings panel.</p>
             </div>
 
             <div class="mt-8 text-right">

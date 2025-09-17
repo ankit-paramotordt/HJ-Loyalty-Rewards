@@ -272,14 +272,62 @@ tailwind.config = {
   </div>
 </main>
 
-<footer class="mt-16 border-t bg-astronaut text-white">
-  <div class="container mx-auto px-4 container-tight py-8 text-sm">
-    © <span id="yr"></span> HJ Rewards Limited. All rights reserved.
-  </div>
-</footer>
+    <!-- LINKS STRIP (centered, two-row design) -->
+    <section class="bg-white">
+      <div class="container mx-auto container-tight px-4 py-10">
+        <ul
+          class="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-base font-medium"
+        >
+          <!-- Row 1 -->
+          <li>
+            <a class="text-astronaut hover:underline" href="#">Help Center</a>
+          </li>
+          <li>
+            <a class="text-astronaut hover:underline" href="cookie.html">Cookie Policy</a>
+          </li>
+          <li>
+            <a class="text-astronaut hover:underline" href="privacy.html">Privacy Policy</a>
+          </li>
+           <li>
+            <a class="text-astronaut hover:underline" id="cookie-settings-footer-link" href="#">Cookie Settings</a>
+          </li>
+          <li>
+            <a class="text-astronaut hover:underline" href="accessibility_statement.html">Accessibility Statement</a>
+          </li>
+           <li>
+            <a class="text-astronaut hover:underline" href="#">Terms and Conditions</a>
+          </li>
+          <!-- Row 2 -->
+          <li>
+            <a class="text-astronaut hover:underline" href="#">Payment & Security Policy</a>
+          </li>
+          <li>
+            <a class="text-astronaut hover:underline" href="#">Refund & Cancellation Policy</a>
+          </li>
+          <li>
+            <a class="text-astronaut hover:underline" href="#">Fraud Prevention & Security Statement</a>
+          </li>
+          <li>
+            <a class="text-astronaut hover:underline" href="#">Transaction Documents</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
-<script src="/js/app.js"></script>
+    <!-- BOTTOM BAR (grey with icons & copyright) -->
+    <footer class="bg-gray-300 text-shark">
+      <div
+        class="container mx-auto container-tight px-4 h-20 flex items-center justify-center"
+      >
+        <div class="text-sm text-shark/80">
+          HJ Rewards Limited© <span id="yr"></span>. All rights reserved.
+        </div>
+      </div>
+      <script>
+        document.getElementById("yr").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+    <script src="/js/app.js"></script>
 </body>
 </html>
 <style>

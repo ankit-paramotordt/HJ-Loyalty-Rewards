@@ -9,7 +9,6 @@
       content="Our Privacy Policy outlines how we collect, use, store, and safeguard your personal data."
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./app.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -68,119 +67,63 @@
   <body class="bg-picton-blue/5 text-shark">
     <!-- NAV -->
     <header
-  id="siteHeader"
-  class="sticky top-0 z-40 border-b transition-all duration-300 will-change-transform bg-[rgba(82,193,226,.10)] border-[rgba(82,193,226,.20)] backdrop-blur"
->
-  <div
-    id="headerInner"
-    class="container mx-auto px-4 container-tight h-16 flex items-center justify-between transition-[height] duration-300"
-  >
-    <!-- Logo + Brand -->
-    <a href="/index.html" class="flex items-center gap-2 shrink-0">
-      <img src="./asset/logo1.png" alt="logo" class="h-14 w-auto transition-all duration-300" />
-      <span class="font-semibold tracking-wide">Loyalty &amp; Rewards</span>
-    </a>
-
-    <!-- Right actions -->
-    <div class="hidden md:flex items-center gap-3 md:gap-4">
-      <a
-        href="#"
-        title="Download on the App Store"
-        class="hidden lg:inline-block"
-      >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-          alt="Download on the App Store"
-          class="h-10 w-auto"
-        />
-      </a>
-      <a
-        href="#"
-        title="Get it on Google Play"
-        class="hidden lg:inline-block"
-      >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-          alt="Get it on Google Play"
-          class="h-10 w-auto"
-        />
-      </a>
-
-      <a
-        id="memberCta"
-        href="/customer.html"
-        class="px-4 py-2 pill text-white bg-picton-blue hover:bg-astronaut whitespace-nowrap"
-      >
-        Member Sign Up / Login
-      </a>
-      <a
-        id="merchantCta"
-        href="/merchant.html"
-        class="px-4 py-2 pill text-picton-blue border border-picton-blue hover:bg-picton-blue/10 whitespace-nowrap"
-      >
-        Merchant Sign Up / Login
-      </a>
-    </div>
-
-    <!-- Mobile: hamburger -->
-    <button
-      id="menuToggle"
-      class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-picton-blue/20 hover:bg-picton-blue/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-picton-blue"
-      aria-label="Open menu"
-      aria-controls="mobileMenu"
-      aria-expanded="false"
-      type="button"
+      class="sticky top-0 z-40 bg-picton-blue/10 backdrop-blur border-b border-picton-blue/20"
     >
-      <!-- burger icon -->
-      <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-      <!-- close icon -->
-      <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-      </svg>
-    </button>
-  </div>
-</header>
+      <div
+        class="container mx-auto px-4 container-tight h-16 flex items-center justify-between"
+      >
+        <a href="/index.html" class="flex items-center">
+          <img src="./asset/logo1.png" alt="logo" class="h-14 w-auto" />
+          <span class="font-semibold tracking-wide">Loyalty & Rewards</span>
+        </a>
 
-<!-- Mobile menu (drawer) -->
-  <div id="mobileMenu" class="md:hidden hidden">
-    <!-- backdrop -->
-    <div id="mobileBackdrop" class="fixed inset-0 bg-black/30 backdrop-blur-md z-[60]"></div>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="/index.html#benefits" class="hover:text-picton-blue">Benefits</a>
+          <a href="/index.html#tiers" class="hover:text-picton-blue">Tiers</a>
+          <a href="/index.html#partners" class="hover:text-picton-blue">Partners</a>
+          <a href="/index.html#points" class="hover:text-picton-blue">Buy Points</a>
+          <a href="/index.html#points" class="hover:text-picton-blue">Redeem Points</a>
+        </nav>
 
-    <!-- panel -->
-    <div class="fixed left-0 right-0 top-16 bg-white border-t border-picton-blue/20 p-4 space-y-2 shadow-lg z-[70]">
-      <div class="pt-3 border-t border-picton-blue/20 grid gap-2">
-        <a
-          id="memberCtaMobile"
-          href="/customer.html"
-          class="px-4 py-2 pill text-white bg-picton-blue hover:bg-astronaut text-center"
-        >Member Sign Up / Login</a>
-        <a
-          id="merchantCtaMobile"
-          href="/merchant.html"
-          class="px-4 py-2 pill text-picton-blue border border-picton-blue hover:bg-picton-blue/10 text-center"
-        >Merchant Sign Up / Login</a>
-
-        <div class="flex items-center justify-center gap-3 pt-2">
-          <a href="#" title="App Store">
+        <div class="flex items-center gap-3 md:gap-4">
+          <a
+            href="#"
+            title="Download on the App Store"
+            class="hidden lg:inline-block"
+          >
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
               alt="Download on the App Store"
               class="h-10 w-auto"
             />
           </a>
-          <a href="#" title="Google Play">
+          <a
+            href="#"
+            title="Get it on Google Play"
+            class="hidden lg:inline-block"
+          >
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
               alt="Get it on Google Play"
               class="h-10 w-auto"
             />
           </a>
+
+          <a
+            href="/customer.html"
+            class="px-4 py-2 pill text-white bg-picton-blue hover:bg-astronaut whitespace-nowrap"
+          >
+            Member Sign In / Up
+          </a>
+          <a
+            href="/merchant.html"
+            class="px-4 py-2 pill text-picton-blue border border-picton-blue hover:bg-picton-blue/10 whitespace-nowrap"
+          >
+            Merchant Sign In / Up
+          </a>
         </div>
       </div>
-    </div>
-  </div>
+    </header>
 
     <main>
       <!-- PRIVACY POLICY CONTENT -->
@@ -191,8 +134,8 @@
           </h1>
 
           <div class="space-y-6 text-gray-800 leading-relaxed prose lg:prose-lg">
-            <p><strong>Effective Date:</strong> August 19, 2025</p>
-            <p>This Privacy Policy (the "Policy") is issued by HJ Reward Limited, a company duly incorporated and existing under the laws of Mauritius, bearing registration no.______, and having its registered office located at Level 1, Maeva Tower, Corner Silicon and Bank Streets, Ebene Cyber City 72201, Republic of Mauritius (“HJ Reward”, “we”, “us”, or “our”). The Policy outlines how we collect, use, store, and safeguard your personal data in relation to the operation of the HJ Reward Program (the "Program").</p>
+            <p><strong>Effective Date:</strong> September 17, 2025</p>
+            <p>This Privacy Policy (the "Policy") is issued by HJ Reward Limited, a company duly incorporated and existing under the laws of Mauritius, bearing registration no. 123456789, and having its registered office located at Level 1, Maeva Tower, Corner Silicon and Bank Streets, Ebene Cyber City 72201, Republic of Mauritius (“HJ Reward”, “we”, “us”, or “our”). The Policy outlines how we collect, use, store, and safeguard your personal data in relation to the operation of the HJ Reward Program (the "Program").</p>
             <p>By enrolling in the Program, using our services, or interacting with our website, mobile application, and related platforms, you acknowledge and agree to the terms of this Privacy Policy. HJ Reward is committed to protecting the privacy and security of your personal data and ensuring that it is processed in compliance with applicable data protection laws, including the Mauritius Data Protection Act 2017, the EU General Data Protection Regulation (GDPR), and other relevant data protection laws across the jurisdictions in which we operate.</p>
 
             <div>
@@ -219,7 +162,7 @@
                  <ul class="list-disc list-inside ml-4 space-y-1 mt-2">
                     <li><strong>Technical Data:</strong> IP address, browser type, device identifiers, operating system version, and other information about the device or platform used to access our services.</li>
                     <li><strong>Usage Data:</strong> Data regarding your activity on our website, mobile app, and other platforms, including page visits, clicks, and interaction with Program features.</li>
-                    <li><strong>Cookies and Tracking Technologies:</strong> Information obtained through the use of cookies, analytics tools, and other tracking technologies (refer to our Cookie Policy for more details).</li>
+                    <li><strong>Cookies and Tracking Technologies:</strong> Information obtained through the use of <a href="/cookie.html" class="text-picton-blue hover:underline">cookies</a>, analytics tools, and other tracking technologies (refer to our <a href="/cookie.html" class="text-picton-blue hover:underline">Cookie Policy</a> for more details).</li>
                 </ul>
             </div>
             
@@ -356,19 +299,61 @@
       </section>
     </main>
 
-    <!-- FOOTER from index.html -->
-    <footer class="bg-gray-300 text-shark">
-        <div
-          class="container mx-auto container-tight px-4 h-20 flex items-center justify-center"
+    <!-- LINKS STRIP (centered, two-row design) -->
+    <section class="bg-white">
+      <div class="container mx-auto container-tight px-4 py-10">
+        <ul
+          class="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-base font-medium"
         >
-          <div class="text-sm text-shark/80">
-            HJ Rewards Limited© <span id="yr"></span>. All rights reserved.
-          </div>
+          <!-- Row 1 -->
+          <li>
+            <a class="text-astronaut hover:underline" href="#">Help Center</a>
+          </li>
+          <li>
+            <a class="text-astronaut hover:underline" href="cookie.html">Cookie Policy</a>
+          </li>
+          <li>
+            <a class="text-astronaut hover:underline" href="privacy.html">Privacy Policy</a>
+          </li>
+           <li>
+            <a class="text-astronaut hover:underline" id="cookie-settings-footer-link" href="#">Cookie Settings</a>
+          </li>
+          <li>
+            <a class="text-astronaut hover:underline" href="accessibility_statement.html">Accessibility Statement</a>
+          </li>
+           <li>
+            <a class="text-astronaut hover:underline" href="#">Terms and Conditions</a>
+          </li>
+          <!-- Row 2 -->
+          <li>
+            <a class="text-astronaut hover:underline" href="#">Payment & Security Policy</a>
+          </li>
+          <li>
+            <a class="text-astronaut hover:underline" href="#">Refund & Cancellation Policy</a>
+          </li>
+          <li>
+            <a class="text-astronaut hover:underline" href="#">Fraud Prevention & Security Statement</a>
+          </li>
+          <li>
+            <a class="text-astronaut hover:underline" href="#">Transaction Documents</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BOTTOM BAR (grey with icons & copyright) -->
+    <footer class="bg-gray-300 text-shark">
+      <div
+        class="container mx-auto container-tight px-4 h-20 flex items-center justify-center"
+      >
+        <div class="text-sm text-shark/80">
+          HJ Rewards Limited© <span id="yr"></span>. All rights reserved.
         </div>
-        <script>
-          document.getElementById("yr").textContent = new Date().getFullYear();
-        </script>
-      </footer>
+      </div>
+      <script>
+        document.getElementById("yr").textContent = new Date().getFullYear();
+      </script>
+    </footer>
 
   </body>
 </html>
